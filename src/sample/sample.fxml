@@ -1,0 +1,12 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<GridPane fx:controller="sample.BackEnd"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+    <Button GridPane.rowIndex="1" GridPane.columnIndex="1" text="Start" onAction="#start" fx:id="startButton"/>
+    <Button GridPane.columnIndex="1" GridPane.rowIndex="2" onAction = "#pressedButton" visible="false" style="-fx-background-color:rgb(0,0,82); -fx-padding:10 20 10 10; -fx-position:fixed;" fx:id="button"/>
+    <Label GridPane.rowIndex="2"  GridPane.columnIndex="2" fx:id="text"/>
+    <Label GridPane.columnIndex="1" GridPane.rowIndex="3" fx:id="scores"/>
+</GridPane>
