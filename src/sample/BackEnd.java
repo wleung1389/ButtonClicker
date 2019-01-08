@@ -24,7 +24,7 @@ public class BackEnd {
     public void pressedButton(javafx.event.ActionEvent actionEvent)
     {
         numClicks++;
-        button.setStyle("-fx-background-color:rgb(0,0,200); -fx-padding:10 20 10 10; -fx-position:fixed;");
+        button.setStyle("-fx-background-color:rgb(0,0,200); -fx-padding:10 80 20 10; -fx-position:fixed;");
         timeLeft2 = 100;
         AnimationTimer a = new AnimationTimer() {
             @Override
@@ -35,7 +35,7 @@ public class BackEnd {
                 }
                 else
                 {
-                    button.setStyle("-fx-background-color:rgb(0,0,82); -fx-padding:10 20 10 10; -fx-position:fixed;");
+                    button.setStyle("-fx-background-color:rgb(0,0,82); -fx-padding:10 80 20 10; -fx-position:fixed;");
                     stop();
                 }
             }
@@ -44,7 +44,7 @@ public class BackEnd {
     }
 
     public void start(ActionEvent actionEvent) {
-        showHighScores();
+        //showHighScores();
         startButton.setVisible(false);
         button.setVisible(true);
         numClicks = 0;
@@ -54,7 +54,7 @@ public class BackEnd {
             public void handle(long now) {
                 if(timeLeft > 0)
                 {
-                    timeLeft -= 20;
+                    timeLeft -= 15;
                     text.setText("Clicks : " + numClicks + " Time Left : " + timeLeft/1000);
                 }
                 else
@@ -69,7 +69,7 @@ public class BackEnd {
         };
         a.start();
     }
-    public void showHighScores()
+    /**public void showHighScores()
     {
         String scoresString = "";
         Path pathToFile = Paths.get("highScores");
@@ -87,4 +87,5 @@ public class BackEnd {
         }
         scores.setText(scoresString);
     }
+     **/
 }
